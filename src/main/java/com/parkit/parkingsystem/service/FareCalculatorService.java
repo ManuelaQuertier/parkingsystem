@@ -18,7 +18,7 @@ public class FareCalculatorService {
         if(duration <= 0.5){
 
             ticket.setPrice(0);
-
+//refactor
         } else if (discount){
 
             switch (ticket.getParkingSpot().getParkingType()) {

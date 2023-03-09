@@ -96,8 +96,8 @@ public class TicketDAO {
 
             ps.setString(1, vehicleRegNumber);
             ResultSet rs = ps.executeQuery();
-
-            nbTicket= rs.getInt("COUNT(*)");
+            rs.next();
+            nbTicket= rs.getInt("nb");
 
             dataBaseConfig.closeResultSet(rs);
             dataBaseConfig.closePreparedStatement(ps);
